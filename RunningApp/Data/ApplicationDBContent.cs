@@ -10,8 +10,8 @@ namespace RunningApp.Data
             
         }
 
-        public DbSet<Races> Races { get; set; }
-        public DbSet<Club> Clubs { get; set; }
+        public DbSet<ClimbingEvent> Climbs { get; set; }
+        public DbSet<Climb> Climb { get; set; }
         public DbSet<Address> Addresses { get; set; }
     }
 }

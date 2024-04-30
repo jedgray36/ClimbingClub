@@ -1,13 +1,16 @@
-﻿namespace RunningApp.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace RunningApp.Models
 {
 	public class AppUser
 	{
-
-		public int Pace { get; set; }
-		public int Milage { get; set; }
+		[Key]
+		public string Id { get; set; }
+		public int Grade { get; set; }
+		public int DistanceClimbed { get; set; }
 		public Address? Address { get; set; }
-		public ICollection<Club> Clubs { get; set; }
-		public ICollection<Races> Races { get; set; }
+		public ICollection<Climb> Climb { get; set; }
+		public ICollection<ClimbingEvent> Climbs { get; set; }
 
 	}
 }

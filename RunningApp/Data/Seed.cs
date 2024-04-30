@@ -14,16 +14,16 @@ namespace RunningApp.Data
 
 				context.Database.EnsureCreated();
 
-				if (!context.Clubs.Any())
+				if (!context.Climb.Any())
 				{
-					context.Clubs.AddRange(new List<Club>()
+					context.Climb.AddRange(new List<Climb>()
 					{
-						new Club()
+						new Climb()
 						{
-							Title = "Running Club 1",
-							Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
-							Description = "This is the description of the first cinema",
-							ClubCategory = ClubCategory.MarathonClub,
+							Title = "Climbing V0",
+							Image = "https://adrenalinevault.com.au/wp-content/uploads/2019/03/membership-1.jpg",
+							Description = "Newbie climbing club for people just starting out",
+							ClimbCategory = ClimbCategory.Newbie,
 							Address = new Address()
 							{
 								Street = "123 Main St",
@@ -31,12 +31,12 @@ namespace RunningApp.Data
 								State = "NC"
 							}
 						 },
-						new Club()
+						new Climb()
 						{
-							Title = "Running Club 2",
-							Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
-							Description = "This is the description of the first cinema",
-							ClubCategory = ClubCategory.RoadRunner,
+							Title = "Climbing Hanger Club",
+							Image = "https://adrenalinevault.com.au/wp-content/uploads/2019/03/membership-1.jpg",
+							Description = "Climbers that have a formed a layer of chalk on their hands",
+                            ClimbCategory = ClimbCategory.HandsOfSteel,
 							Address = new Address()
 							{
 								Street = "123 Main St",
@@ -44,12 +44,12 @@ namespace RunningApp.Data
 								State = "NC"
 							}
 						},
-						new Club()
+						new Climb()
 						{
-							Title = "Running Club 3",
-							Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
-							Description = "This is the description of the first club",
-							ClubCategory = ClubCategory.Trail,
+							Title = "River Climbing Club",
+							Image = "https://adrenalinevault.com.au/wp-content/uploads/2019/03/membership-1.jpg",
+							Description = "For Climbers that prefer the great outdoors",
+                            ClimbCategory = ClimbCategory.OutdoorClimbs,
 							Address = new Address()
 							{
 								Street = "123 Main St",
@@ -57,12 +57,12 @@ namespace RunningApp.Data
 								State = "NC"
 							}
 						},
-						new Club()
+						new Climb()
 						{
-							Title = "Running Club 3",
-							Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
-							Description = "This is the description of the first club",
-							ClubCategory = ClubCategory.RoadRunner,
+							Title = "Crimps and Climbs",
+							Image = "https://adrenalinevault.com.au/wp-content/uploads/2019/03/membership-1.jpg",
+							Description = "Casual climbing ",
+                            ClimbCategory = ClimbCategory.Casual,
 							Address = new Address()
 							{
 								Street = "123 Main St",
@@ -73,17 +73,17 @@ namespace RunningApp.Data
 					});
 					context.SaveChanges();
 				}
-				//Races
-				if (!context.Races.Any())
+				//Climbing Events
+				if (!context.Climbs.Any())
 				{
-					context.Races.AddRange(new List<Races>()
+					context.Climbs.AddRange(new List<ClimbingEvent>()
 					{
-						new Races()
+						new ClimbingEvent()
 						{
-							Title = "Running Race 1",
-							Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
-							Description = "This is the description of the first race",
-							RaceCategory = RaceCategory.Marathon,
+							Title = "New Climbers Event",
+							Image = "https://adrenalinevault.com.au/wp-content/uploads/2019/03/membership-1.jpg",
+							Description = "An event for new climbers",
+                            ClimbEventCategory = ClimbingEventCategory.V1V3,
 							Address = new Address()
 							{
 								Street = "123 Main St",
@@ -91,12 +91,12 @@ namespace RunningApp.Data
 								State = "NC"
 							}
 						},
-						new Races()
+						new ClimbingEvent()
 						{
-							Title = "Running Race 2",
-							Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
-							Description = "This is the description of the first race",
-							RaceCategory = RaceCategory.Ultra,
+							Title = "Training Session",
+							Image = "https://adrenalinevault.com.au/wp-content/uploads/2019/03/membership-1.jpg",
+							Description = "Casual training session for experienced climbers",
+                            ClimbEventCategory = ClimbingEventCategory.V4V6,
 							AddressId = 5,
 							Address = new Address()
 							{

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace RunningApp.Models
 {
-	public class Races
+	public class ClimbingEvent
 	{
 		[Key]
 		public int Id { get; set; }
@@ -20,7 +20,7 @@ namespace RunningApp.Models
 		[ForeignKey("Address")]
 		public int AddressId { get; set; }
 		public Address Address { get; set; }
-		public RaceCategory RaceCategory { get; set; }
+		public ClimbingEventCategory ClimbEventCategory { get; set; }
 		[ForeignKey("AppUser")]
 		public string? AppUserId { get; set; }
 		public AppUser? AppUser { get; set; }

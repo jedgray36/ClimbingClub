@@ -4,7 +4,7 @@ using RunningApp.Data.Enum;
 
 namespace RunningApp.Models
 {
-	public class Club
+	public class Climb
 	{
 		[Key]
 		public int Id { get; set; }
@@ -14,7 +14,7 @@ namespace RunningApp.Models
 		[ForeignKey("Address")]
 		public int? AddressId { get; set; }
 		public Address? Address { get; set; }
-		public ClubCategory ClubCategory { get; set; }
+		public ClimbCategory ClimbCategory { get; set; }
 		[ForeignKey("AppUser")]
 		public string? AppUserId { get; set; }
 		public AppUser? AppUser { get; set; }
